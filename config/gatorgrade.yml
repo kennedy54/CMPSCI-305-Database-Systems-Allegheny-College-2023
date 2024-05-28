@@ -1,0 +1,56 @@
+# --> check the build file
+- src/queries.md:
+    - description: Ensure that the file src/queries.md exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs and remove the TODO markers in the file src/queries.md
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Name Here' prompt in the file src/build_DB.txt
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+
+- writing/report.md:
+    - description: Ensure that the file writing/report.md exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs and remove the TODO markers in the file writing/report.md
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Name Here' prompt in the file writing/report.md
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+
+- writing/research_questions.md:
+    - description: Ensure that the file writing/research_questions.md exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs and remove the TODO markers in the file writing/research_questions.md
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Name Here' prompt in the file writing/research_questions.md
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+
+
+
+# --> check that the number of commits in the Git repository is beyond a threshold
+- description: Have at least a specific minimum number of commits (3) in repository
+  check: CountCommits
+  options:
+    count: 3
